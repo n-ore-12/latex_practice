@@ -1,0 +1,138 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{setspace}
+\usepackage{sectsty}
+\sectionfont{\centering}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{ {c:/user/imageskaon} }
+\titlelabel{\thetitle.\quad}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\filcenter} 
+  {\normalsize\thesection.\quad}     
+  {0pt}
+  {}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\renewcommand{\abstractname}{}
+\title{\large \textbf{Kaon–deuteron correlation function \\ from an effective field theory approach\footnote{Presented by Juan Torres-Rincon at the Excited QCD 2026 Workshop in Granada
+(Spain), on January 10, 2026.}}}
+\author{\textsc{Juan Torres-Rincon and \`{A}ngels Ramos}}
+\date{\normalsize \textit{Received July 9, 2026}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\vspace{-4em}
+\begin{spacing}{0.9}
+We present a study of femtoscopic correlation functions for	$K^{-}d$ and $K^{+}d$ pairs, and compare our results with recent measurements by the ALICE Collaboration in both Pb-Pb and high-multiplicity pp collisions. The kaon-deuteron wave functions are derived from scattering amplitudes using a unitarized chiral effective theory model describing the elementary interactions of $K^{\pm}$ mesons with nucleons. We then evaluate the $K^{\pm}d$ strong scattering amplitudes by solving the Faddeev equations within two distinct frameworks: the Impulse Approximation and the Fixed Center Approximation, which accounts for multiple scatterings. We also incorporate the long-range Coulomb effects between the kaon and the deuteron. We show that the $K^{−}d$ correlation function exhibits large sensitivity to both the size of the emitting source and the relative momentum of the pair, being heavily influenced by rescattering processes. In contrast, the $K^{+}d$ correlation function is dominated by the weakly repulsive $K^{+}N$ interaction, showing
+deviations from purely Coulombic behavior only at small emission source sizes. Our predictions are in agreement with the ALICE experimental data, and also with the energy-shift and width of the $1s$ level of the kaonic deuterium preliminary results from the SIDDHARTA 2 Collaboration.
+\end{spacing}
+\end{abstract}
+
+\section{\normalsize {Introduction}}
+Over the past two decades, femtoscopy has emerged as a high-precision technique for probing the space-time structure of particle-emitting sources and for detailing the final-state interactions between hadrons generated in the last stage of high-energy relativistic collisions. While the technique was initially established for correlations of light mesons, such as pion-pion pairs, recent experimental and theoretical focus has shifted towards more complex systems, for example, deuteron-hadron pairs. These systems can help to establish the most relevant production mechanism of light nuclei in hadronic collisions and resolve the ongoing debate between thermal freezeout models, where nuclei emerge directly from the expanding fireball, and final-state coalescence models, where constituent nucleons merge to form  nuclei at later stages. 
+
+Correlations between a deuteron and a kaon have been successfully measured by the ALICE Collaboration, starting with the precise data on $K^{+}d$ correlations in high-multiplicity $pp$ collisions at $\sqrt{s}$ = 13 TeV, alongside with data on both $K^{+}d$ and $K^{-}d$ correlations in Pb-Pb collisions at  $\sqrt^{S}{NN}$ = 5.02 TeV. Since a two-body treatment of kaon–deuteron systems is physically well justified at the relevant momenta, a robust interpretation of these complex measurements necessitates a realistic, microscopically grounded description of the kaon–deuteron interaction. In this work, we introduce a unified, rigorous theoretical framework for kaon–deuteron femtoscopy based on chiral effective elementary interactions. We combine these amplitudes within the Faddeev equations, and compute both the $K^{-}d$ and $K^{+}d$ amplitudes. These strong amplitudes are employed, together with a separable treatment of the Coulomb interaction, to obtain the exact pair wave functions necessary for computing theoretical correlation functions to be compared directly with ALICE data.
+
+\section{Kaon-Deutereum Scattering Amplitudes}
+The determination of the $K^{-}d$ scattering amplitude, $T_{K-d}$ requires summing  the individual Faddeev partitions, $T_p^-$ and $T_n^-$, which contain all processes in which the incoming $K^{-}$ interacts first with the proton or the neutron of the deuteron, respectively. The system of equations reads,
+
+
+\begin{equation}
+\begin{array}{rcl}
+T_p^- & = & t_{K-p} + t_{K-p}G_0T_n^- - t_xG_0T_n^x, \\[0.5em]
+T_n^- & = & t_{K-n} + t_{K-n}G_0T_p^-, \\[0.5em]
+T_n^x & = & t_x - t_{\overline{K}^{\,0}_{n}}\,G_0T_n^x + t_xG_0T_n^-. \label{eq:twobodyinteractions}
+\end{array}
+\end{equation}
+
+Where $T_n^x$ accounts for the charge exchange channel $\overline{K}^{\,0}_{nn}$ \leftrightarrow $K^{-}pn$.
+
+In Eq.\,(\ref{eq:twobodyinteractions}), the two-body elementary \textit{s}-wave amplitudes $t_i$ refer to the elastic interactions ($t_{K-p}$, $t_{K-n}$, $t_{\overline{K}^{\,0}_{n}}$) and the charge exchange interaction $t_x$ corresponding to the transition $\overline{K}^{\,0}_{n}}$ \rightarrow $K^{-}p$. These amplitudes are derived from a LO chiral unitary model in coupled-channels. This model for the kaon–deuteron interaction has previously been employed successfully at low energy at the level of scattering lengths. In the present work, we extend the interaction to finite energy and consider the $K^{-}d$ amplitudes beyond the threshold, allowing us to account for the correlation functions at finite relative momenta, $k^{\ast}$.
+
+The $G_0$ function in Eq.\,(\ref{eq:twobodyinteractions}) represents the free kaon propagator convoluted by the deuteron form factor $F_d{(q)}$,
+
+\begin{equation}
+G_0(q^0) = \int \frac{d^3{q}}{(2\pi)^3} \frac{F_d(q)}{(q^0)^2 - q^2 - m_K^{2} + \rm{i}\eta} \quad , \quad F_d(q) = \int d^3{r}e^{\rm{-iq\cdot r}} |\phi_d{(d)|^2 \, , \quad
+\end{equation}
+where $m_K$ is the intermediate kaon mass ($K^-$ or $\overline{K}^0$), and the deuteron wave function $\psi_d(r)$, contains both \textit{s}-wave and \textit{d}-wave contributions from the Argonne V18 NN interaction.
+
+The system of coupled equations (\ref{eq:twobodyinteractions}) can be solved using  the Impulse Approximation (IA), which amounts to exclusively keeping the first terms in $T_p^{-}$ and $T_n^{-}$; or in the Fixed Center Approximation (FCA) which results in the full solution of the algebraic system.
+
+In the simpler IA---or single-scattering approximation---the $K^-{d}$ amplitude, $T_{K-d}^{IA}$ reads,
+
+\begin{equation}
+T_{K-d}^{IA}(k^{'}, k) = [t_{K-p}(k^{'},k) + t_{K-n}(k^{'}, k)] F_d{(q)},
+\end{equation}
+where $q = |\mathbf{k^'} - \mathbf{k}| / 2$ is half the momentum transferred to the deuteron, defined from the initial kaon momentum $\mathbf{k}$ and final momentum $\mathbf{k^{'}}$.
+
+The full FCA equations yield a more complex amplitude containing all orders of rescattering,
+
+\begin{equation}
+T_{K-d}^{FCA} = \frac{T_{K-d}^{IA} + (2t_{K-p}t_{K-n}-\tilde{t}_x^2)G_0-2\tilde{t}_x^2{t}_{K-n}G_0^{2}}{1 - t_{K-p}t_{K-n}G_0^{2}+t_x^{2}t_{K-n}G_0^3}, \quad \rm{with} \tilde{t}_x \equiv \frac{t_x}{\sqrt{1+t_{\overline{K}^{0}n}G_0}} \, .
+\end{equation}
+By comparing the FCA predictions with full exact Faddeev calculations for near-threshold observables [10], we can confidently assign a theoretical uncertainty to the FCA on the order of 10\% − 30 \%. This uncertainty lies well within the systematic uncertainties connected to the use of the chiral model used in the elementary two-body matrix elements. 
+
+For the $K^+{d}$ scattering amplitude, one can obtain equivalent mathematical expressions by replacing $K^-$ \rightarrow $K^+$, $\overline{K}^0$ \rightarrow $K^0$, $p$ \rightarrow $n$, and $n$ \rightarrow $p$. 
+
+The energy dependence of the $K^-{d}$ scattering amplitude reveals a pronounced peak just below the $K^-{pn}$ threshold. This structure is a reflection of the subthreshold $\rm \Lambda (1405$) resonance, dynamically generated in the $I = 0 \, \overline{K} N$ interaction. The FCA amplifies the strength of this state with respect to the IA due to the multiple rescattering within the deuteron. Conversely, the $K^+{d}$ amplitude is essentially featureless and inherently weak in strength (both in the IA and the FCA) aligning with the expectation that the $K^+{N}$ interaction is mildly repulsive and elastic at low energies.
+
+
+\begin{table}[t]
+\centering
+
+\begin{tabular}{lcccc}
+\toprule
+& $A_{K-d}$ (fm) & $A_{K+d}$ (fm) & $\epsilon_{1s}$ (eV) & $\Gamma_{1s}$ (eV) \\
+\midrule
+IA & $-0.5826 + \rm{i}2.145$ & $-0.47$ & $791$ & $2063$ \\
+FCA & $-2.062 + \rm{i}1.767$ & $-0.43$ & $1124$ & $626$ \\
+
+\bottomrule
+
+\end{tabular}
+\caption{Calculated results for the $K^-d$ and $K^+d$ scattering lengths, alongside predictions for the strong-interaction energy shift ($\epsilon_{1s}$) and width ($\Gamma_{1s}$) of the $1s$ atomic level in kaonic deuterium.}
+\label{tab:kd-results}
+\end{table}
+
+In Table 1 we present results of the scattering lengths at the $K^\pm {d}$ thresholds, for both IA and FCA approximations. The large real negative part of the $K^-{d}$ scattering length is a signature of the dynamically generated $\bar{K}\, N \, N$ system. The large imaginary part reflects the available phase space for conversion channels ($\pi \Lambda N$, $\pi \Sigma N$). In the case of $K^+{d}$ scattering lengths, the predictions for the IA and FCA frameworks are practically identical due to its weaker interaction. 
+
+In the same table we present our predictions for energy shift ($\epsilon_{1s}$)and total width ($\Gamma_{1s}$) of the $1s$ atomic level in exotic kaonic deuterium atom. These quantities present large differences between IA and FCA. In the latter case, the decay width $\Gamma_{1s}$ is in striking agreement with preliminary estimates from the SIDDHARTA-2 experimental collaboration, though the calculated energy shift is approximately 30\% larger.
+
+\section{Correlation Functions}
+
+The application of the two-body amplitude to the femtoscopic correlation function between a $K^\pm$ and a $d$ uses the Koonin-Pratt formula,
+
+\begin{equation}
+C(k^{\ast}) = \int d^3{r} \, S_{12}(r) |\mathbf{\Psi}(r;k^{\ast})|^2 \, ,
+\end{equation}
+where $\mathbf{\Psi}(r;k^{\ast})$ represents the relative two-body wave function and $S_{12}(r)$ id thr normalized relative source function, which follows a Gaussian profile,
+
+\begin{equation}
+S_{12}(r) = \frac{1}{(2 \pi R_{Kd}^2)^{3/2}} \, \rm{exp} \, \left(\frac{r^2}{2R_{Kd}^2} \right) \, ,
+
+
+\end{equation}
+where the two-body source size $R_{Kd}$ is related to the individual $K$ and $d$ source radii. Here, it is extracted from an experimental analysis.
+
+We restrict the low-energy strong dynamics to the $L = 0$ partial wave, but to all orders in the Coulomb interaction. In this case, we separate the full wave function into the complete Coulomb wave function, its \textit{s}-wave projection, and the Coulomb $+$ strong \textit{s}-wave component: $\mathbf{\Psi}(r;k^{\ast}) = \Phi^c(r;k^{\ast} - \Phi_0^c(k^{\ast}r) + \Psi_0(r;k^{\ast})$. The correlation function reads,
+
+\begin{equation}
+C(k^{\ast}) = \int \rm{d}^3rS_{12}(r)|\Phi^c(r;k^{\ast})|^2 + \int 4\pi r^2 \rm{d} S_{12}(r) \left(|\Psi_0(r;k^{\ast})|^2 - |\Psi_0^{c}(k^{\ast}r|^2 \right) \, .
+\end{equation}
+
+The strong $+$ Coulomb wave function $\Psi_0(r;k^{\ast})$ is determined from the Lippman-Schwinger equation projected into the \textit{s}-wave:
+\begin{equation}
+\Psi_0(r;k^{\ast}) = j_0(k^{\ast}r) + \int_0^\infty \frac{\mathrm{d}^3q}{(2\pi)^3} \frac{M_q}{E_d} \frac{1}{2\omega_K} \frac{T_{Kd}(q, k^{\ast}; \sqrt{s_{Kd}})j_0(qr)}{\sqrt{s_{Kd}} - E_d - \omega_K + \mathrm{i}\eta}
+\end{equation}
+where $j_0(x)$ is the spherical Bessel function, $\omega_K  = \sqrt{q^2 + m_K^2}$ represents the intermediate kaon energy, $E_d$ is the corresponding deuteron energy, and $\sqrt{s_{Kd}}$ defines the total invariant energy of the pair in the CoM frame. 
+
+To simplify the calculation the strong and Coulomb scattering amplitudes are assumed to be approximately separable, $T_{Kd} \approx T_{Kd}^{FCA} + T_{Kd}^c$ (estimated within a 10\% error by comparing the results with the solution of the Schr\"{o}dinger equation of the same problem). In addition, we apply the onshell factorization on the strong scattering amplitude within the momentum integral, which we regularize with a momentum cutoff $\Lambda = 1000 \: \rm{MeV}$.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.6]{"C:\Users\User\Desktop\figure1kaonpaper"}
+\end{figure}
+
+
+\end{document}
